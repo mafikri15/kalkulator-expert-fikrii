@@ -1,0 +1,116 @@
+/* Gaya Umum */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Judul */
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Tampilan Input */
+#display {
+    width: 90%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 22px;
+    text-align: right;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+    color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Grid Tombol */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 320px;
+    margin: auto;
+}
+
+/* Gaya Tombol */
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #3b5998;
+    color: white;
+    transition: transform 0.1s, background 0.3s;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efek Hover dan Klik */
+button:hover {
+    background: #4c70ba;
+}
+
+button:active {
+    transform: scale(0.9);
+    background: #365899;
+}
+
+/* Tombol Fungsi Khusus */
+button:nth-child(4n) { /* Operator */
+    background: #ff9800;
+}
+
+button:nth-child(4n):hover {
+    background: #ffb74d;
+}
+
+button:nth-child(1) { /* Tombol C (Clear) */
+    background: #d32f2f;
+}
+
+button:nth-child(1):hover {
+    background: #e57373;
+}
+
+/* Efek Tombol Hasil */
+button:nth-child(17) {
+    background: #4caf50;
+}
+
+button:nth-child(17):hover {
+    background: #66bb6a;
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2, .buttons {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Kursor standar */
+body {
+    cursor: none; /* Menyembunyikan kursor default */
+}
+
+.trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: transform 0.1s linear;
+}
